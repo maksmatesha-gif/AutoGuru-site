@@ -17,6 +17,15 @@
 }
 
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -178,11 +187,11 @@ ul, ol { list-style: none; }
   margin-bottom: 16px;
 }
 .hero h1 {
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(2.1rem, 6vw, 3.6rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.035em;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .hero h1 em {
   font-style: normal;
