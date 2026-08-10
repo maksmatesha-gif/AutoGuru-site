@@ -371,6 +371,53 @@ ul, ol { list-style: none; }
   gap: 10px;
 }
 
+/* ===== НОВЫЙ БЛОК СТРАХОВЫЕ СЛУЧАИ ===== */
+.insurance {
+  padding: 80px 0;
+  background: var(--bg-elev);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.insurance__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.insurance__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+  transition: border-color .25s, transform .25s;
+}
+.insurance__item:hover {
+  border-color: rgba(212,160,23,.4);
+  transform: translateY(-4px);
+}
+.insurance__icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+.insurance__item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.insurance__item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.insurance__cta {
+  text-align: center;
+}
+.insurance__cta .btn {
+  min-width: 280px;
+}
+/* ===== КОНЕЦ БЛОКА ===== */
+
 /* Before/After */
 .ba {
   padding: 80px 0;
@@ -653,6 +700,7 @@ ul, ol { list-style: none; }
   .process__list { grid-template-columns: 1fr 1fr; }
   .reviews__grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
+  .insurance__grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -667,4 +715,6 @@ ul, ol { list-style: none; }
   .topbar__phone { display: none; }
   .float { right: 12px; bottom: 16px; }
   .float__btn { width: 46px; height: 46px; }
+  .insurance__grid { grid-template-columns: 1fr; }
+  .insurance__cta .btn { min-width: auto; width: 100%; }
 }
